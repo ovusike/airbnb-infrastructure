@@ -4,12 +4,12 @@ resource "aws_instance" "web" {
   monitoring = true
   ebs_optimized = true
   metadata_options {
-      http_endpoint = "enabled"
-      http_tokens   = "required"
-    }
+    http_endpoint = "enabled"
+    http_tokens   = "required"
+  }
   root_block_device {
-      encrypted     = true
-    }
+    encrypted     = true
+  }
 tags = {
     Name = var.name
   }

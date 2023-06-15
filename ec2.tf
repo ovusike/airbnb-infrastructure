@@ -2,6 +2,7 @@ resource "aws_instance" "web" {
   ami           = var.AMI_ID
   instance_type = var.INSTANCE_TYPE
   monitoring = true
+  iam_instance_profile = "test"
   ebs_optimized = true
   metadata_options {
     http_endpoint = "enabled"
